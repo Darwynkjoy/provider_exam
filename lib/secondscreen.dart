@@ -19,7 +19,7 @@ class _secondscreenState extends State<Secondscreen>{
       ),
       body: Column(
         children: [
-          Center(child: Text("Total count is:${button.count}",style: TextStyle(fontSize: 20,color: Colors.black),)),
+          Center(child: Text("Total count is:${button.numbers.length}",style: TextStyle(fontSize: 20,color: Colors.black),)),
         ],
       ),
     );

@@ -22,27 +22,22 @@ class _firstscreenState extends State<Firstscreen>{
             onTap: (){
               Navigator.push((context), MaterialPageRoute(builder: (context)=>Secondscreen()));
             },
-            child: Icon(Icons.arrow_forward,color: Colors.red,))
+            child: Icon(Icons.arrow_forward,color: const Color.fromARGB(255, 255, 255, 255),))
         ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Center(child: Text("Total count is:${button.count}",style: TextStyle(fontSize: 20,color: Colors.black),)),
-           Text("1",style: TextStyle(fontSize: 15,color: Colors.black),),
-           Text("2",style: TextStyle(fontSize: 15,color: Colors.black),),
-           Text("3",style: TextStyle(fontSize: 15,color: Colors.black),),
-           Text("4",style: TextStyle(fontSize: 15,color: Colors.black),),
-           Text("5",style: TextStyle(fontSize: 15,color: Colors.black),),
-           Text("${button.count}",style: TextStyle(fontSize: 15,color: Colors.black),),
+          Center(child: Text("Total count is:${button.numbers.length}",style: TextStyle(fontSize: 20,color: Colors.black),)),
+           //Text("${button.count}",style: TextStyle(fontSize: 15,color: Colors.black),),
            Expanded(
              child: ListView.builder(
               itemBuilder: (context,index){
               return ListTile(
-                title: Text("${button.count}"),
+                title: Text("${button.numbers[index].toString()}"),
               );
              },
-             itemCount: button.count-5),
+             itemCount: button.numbers.length),
            )
 
           ],

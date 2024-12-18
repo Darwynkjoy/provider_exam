@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 
 class providerexample extends ChangeNotifier{
-  int _count=6;
-  int get count=>_count;
+List <int> numbers=[1,2,3,4,5];
 
   void increment(){
-    _count++;
-    notifyListeners();
-  }
-  void printable(){
-    int ans=_count;
-    print("$ans");
+    numbers.add(numbers.last+1);
     notifyListeners();
   }
 }
